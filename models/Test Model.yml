@@ -1,6 +1,6 @@
 unique_name: Test Model
 object_type: model
-label: Test Model
+label: Test Model f
 dimensions:
   - Transaction_ID
 metrics:
