@@ -1,0 +1,18 @@
+unique_name: ATM_LOCATION_LOOKUP (1)
+object_type: dataset
+label: ATM_LOCATION_LOOKUP (1)
+columns:
+  - name: LOCATIONID
+    data_type: string
+  - name: LOCATIONNAME
+    data_type: string
+  - name: NUMATMS
+    data_type: decimal(38,0)
+  - name: CITY
+    data_type: string
+  - name: STATE
+    data_type: string
+  - name: COUNTRY
+    data_type: string
+connection_id: con_WBD_FL_WBD
+table: ATM_LOCATION_LOOKUP

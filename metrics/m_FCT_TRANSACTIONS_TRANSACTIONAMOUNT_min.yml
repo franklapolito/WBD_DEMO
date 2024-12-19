@@ -1,0 +1,7 @@
+unique_name: m_FCT_TRANSACTIONS_TRANSACTIONAMOUNT_min
+object_type: metric
+label: Min Transaction Amount
+calculation_method: minimum
+column: TRANSACTIONAMOUNT
+dataset: FCT_TRANSACTIONS
+format: $#,##0;($#,##0)

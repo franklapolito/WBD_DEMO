@@ -1,0 +1,7 @@
+unique_name: m_FCT_TRANSACTIONS_CARDHOLDERID_dc
+object_type: metric
+label: Number of Active CardHolders
+calculation_method: count distinct
+column: CARDHOLDERID
+dataset: FCT_TRANSACTIONS
+format: general number

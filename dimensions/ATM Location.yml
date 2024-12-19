@@ -1,0 +1,69 @@
+unique_name: ATM Location
+object_type: dimension
+label: ATM Location
+hierarchies:
+  - unique_name: ATM Location
+    label: ATM Location
+    folder: ATM Location
+    levels:
+      - unique_name: ATM Name
+  - unique_name: ATM Location by Country, State, City
+    label: ATM Location by Country, State, City
+    folder: ATM Location
+    levels:
+      - unique_name: COUNTRY
+      - unique_name: STATE
+      - unique_name: CITY
+      - unique_name: ATM Name - Country
+  - unique_name: ATM Location Hierarchy - Country
+    label: ATM Location by Country
+    folder: ATM Location
+    levels:
+      - unique_name: COUNTRY
+      - unique_name: ATM Name - Country
+level_attributes:
+  - unique_name: ATM Name
+    label: ATM Name
+    contains_unique_names: true
+    dataset: ATM_LOCATION_LOOKUP
+    folder: ATM Location
+    is_unique_key: true
+    key_columns:
+      - LOCATIONID
+    name_column: LOCATIONNAME
+  - unique_name: ATM Name - Country
+    label: ATM Name
+    contains_unique_names: false
+    dataset: ATM_LOCATION_LOOKUP
+    folder: ATM Location
+    is_unique_key: true
+    key_columns:
+      - LOCATIONID
+    name_column: LOCATIONNAME
+  - unique_name: COUNTRY
+    label: COUNTRY
+    contains_unique_names: false
+    dataset: ATM_LOCATION_LOOKUP
+    is_unique_key: false
+    key_columns:
+      - COUNTRY
+    name_column: COUNTRY
+  - unique_name: STATE
+    label: STATE
+    contains_unique_names: false
+    dataset: ATM_LOCATION_LOOKUP
+    folder: ATM Location
+    is_unique_key: false
+    key_columns:
+      - STATE
+    name_column: STATE
+  - unique_name: CITY
+    label: CITY
+    contains_unique_names: false
+    dataset: ATM_LOCATION_LOOKUP
+    folder: ATM Location
+    is_unique_key: false
+    key_columns:
+      - CITY
+    name_column: CITY
+type: standard

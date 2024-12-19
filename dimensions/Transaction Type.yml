@@ -1,0 +1,38 @@
+unique_name: Transaction Type
+object_type: dimension
+label: Transaction Type
+hierarchies:
+  - unique_name: Transaction By Type
+    label: Transactions By Type
+    folder: Transactions
+    levels:
+      - unique_name: Transaction By Type Level
+      - unique_name: Transaction ID
+level_attributes:
+  - unique_name: Transaction ID
+    label: Transaction ID
+    contains_unique_names: false
+    dataset: FCT_TRANSACTIONS
+    folder: Transactions
+    is_unique_key: true
+    key_columns:
+      - TRANSACTIONID
+    name_column: TRANSACTIONID
+  - unique_name: Transaction By Type Level
+    label: Transaction By Type Level
+    contains_unique_names: false
+    dataset: TRANSACTION_TYPE_LOOKUP
+    folder: Transactions
+    is_unique_key: false
+    key_columns:
+      - TRANSACTIONTYPEID
+    name_column: TRANSACTIONTYPENAME
+relationships:
+  - from:
+      dataset: FCT_TRANSACTIONS
+      join_columns:
+        - TRANSACTIONTYPEID
+    to:
+      level: Transaction By Type Level
+    type: snowflake
+type: standard

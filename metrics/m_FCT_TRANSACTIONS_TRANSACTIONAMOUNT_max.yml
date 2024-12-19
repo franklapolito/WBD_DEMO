@@ -1,0 +1,7 @@
+unique_name: m_FCT_TRANSACTIONS_TRANSACTIONAMOUNT_max
+object_type: metric
+label: Max Transaction Amount
+calculation_method: maximum
+column: TRANSACTIONAMOUNT
+dataset: FCT_TRANSACTIONS
+format: $#,##0;($#,##0)

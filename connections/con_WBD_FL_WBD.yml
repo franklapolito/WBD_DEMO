@@ -1,0 +1,6 @@
+unique_name: con_WBD_FL_WBD
+object_type: connection
+label: con_WBD_FL_WBD
+as_connection: Snowflake Partner
+database: WBD_FL
+schema: WBD

@@ -1,0 +1,7 @@
+unique_name: Average Transaction Amount
+object_type: metric
+label: Average Transaction Amount
+calculation_method: average
+column: TRANSACTIONAMOUNT
+dataset: FCT_TRANSACTIONS
+format: $#,##0;($#,##0)

@@ -1,0 +1,38 @@
+unique_name: Customer ATM Location
+object_type: dimension
+label: Customer ATM Location
+hierarchies:
+  - unique_name: Customer ATM Location
+    label: Customer ATM Location
+    folder: Customer ATM Location
+    levels:
+      - unique_name: Location Name
+      - unique_name: Customer ATM Location Level
+level_attributes:
+  - unique_name: Location Name
+    label: Location Name
+    contains_unique_names: false
+    dataset: ATM_LOCATION_LOOKUP (1)
+    folder: Customer ATM Location
+    is_unique_key: true
+    key_columns:
+      - LOCATIONID
+    name_column: LOCATIONNAME
+  - unique_name: Customer ATM Location Level
+    label: Customer ATM Location Level
+    contains_unique_names: false
+    dataset: CUSTOMER_LOOKUP
+    folder: Customer ATM Location
+    is_unique_key: true
+    key_columns:
+      - CARDHOLDERID
+    name_column: FullName
+relationships:
+  - from:
+      dataset: CUSTOMER_LOOKUP
+      join_columns:
+        - ''
+    to:
+      level: Location Name
+    type: snowflake
+type: standard

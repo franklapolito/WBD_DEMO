@@ -1,0 +1,10 @@
+unique_name: TRANSACTION_TYPE_LOOKUP
+object_type: dataset
+label: TRANSACTION_TYPE_LOOKUP
+columns:
+  - name: TRANSACTIONTYPEID
+    data_type: decimal(38,0)
+  - name: TRANSACTIONTYPENAME
+    data_type: string
+connection_id: con_WBD_FL_WBD
+table: TRANSACTION_TYPE_LOOKUP
