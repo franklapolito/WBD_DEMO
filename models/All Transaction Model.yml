@@ -1,0 +1,51 @@
+unique_name: All Transaction Model
+object_type: model
+label: All Transaction Model
+description: 2.1 million row Fact Table of ATM transactions in Africa
+dimensions: []
+metrics:
+  - unique_name: m_FCT_ALL_TRANSACTIONS_Net_Amount_sum
+    folder: Customer Metrics
+  - unique_name: Number of Cardholders
+    folder: Customer Metrics
+relationships:
+  - unique_name: FCT_ALL_TRANSACTIONS_TRANSACTIONID_to_Transaction Type_Transaction ID
+    from:
+      dataset: FCT_ALL_TRANSACTIONS
+      join_columns:
+        - TRANSACTIONID
+    to:
+      dimension: Transaction Type
+      level: Transaction ID
+  - unique_name: FCT_ALL_TRANSACTIONS_CARDHOLDERID_to_Customer_Cardholder ID - FullName
+    from:
+      dataset: FCT_ALL_TRANSACTIONS
+      join_columns:
+        - CARDHOLDERID
+    to:
+      dimension: Customer
+      level: Cardholder ID - FullName
+  - unique_name: FCT_ALL_TRANSACTIONS_CARDHOLDERID_to_Customer_Cardholder - ID
+    from:
+      dataset: FCT_ALL_TRANSACTIONS
+      join_columns:
+        - CARDHOLDERID
+    to:
+      dimension: Customer
+      level: Cardholder - ID
+  - unique_name: FCT_ALL_TRANSACTIONS_LOCATIONID_to_ATM Location_ATM Name
+    from:
+      dataset: FCT_ALL_TRANSACTIONS
+      join_columns:
+        - LOCATIONID
+    to:
+      dimension: ATM Location
+      level: ATM Name
+  - unique_name: FCT_ALL_TRANSACTIONS_LOCATIONID_to_ATM Location_ATM Name - Country
+    from:
+      dataset: FCT_ALL_TRANSACTIONS
+      join_columns:
+        - LOCATIONID
+    to:
+      dimension: ATM Location
+      level: ATM Name - Country

@@ -1,8 +1,7 @@
 unique_name: Test Model
 object_type: model
 label: Test Model f
-dimensions:
-  - Transaction_ID
+dimensions: []
 metrics:
   - unique_name: Average Transaction Amount
     folder: Transaction Metrics
@@ -13,6 +12,7 @@ metrics:
   - unique_name: m_FCT_TRANSACTIONS_CARDHOLDERID_dc
   - unique_name: m_FCT_TRANSACTIONS_Net_Amount_sum
     folder: Customer
+  - unique_name: m_FCT_TRANSACTIONS_TRANSACTIONID_dc
 relationships:
   - unique_name: FCT_TRANSACTIONS_LOCATIONID_to_ATM Location_ATM Name
     from:
@@ -54,21 +54,3 @@ relationships:
     to:
       dimension: Customer
       level: Cardholder ID - FullName
-  - unique_name: FCT_TRANSACTIONS_LOCATIONID_to_Customer ATM Location_Location Name
-    from:
-      dataset: FCT_TRANSACTIONS
-      join_columns:
-        - LOCATIONID
-    to:
-      dimension: Customer ATM Location
-      level: Location Name
-  - unique_name: >-
-      FCT_TRANSACTIONS_CARDHOLDERID_to_Customer ATM Location_Customer ATM
-      Location Level
-    from:
-      dataset: FCT_TRANSACTIONS
-      join_columns:
-        - CARDHOLDERID
-    to:
-      dimension: Customer ATM Location
-      level: Customer ATM Location Level

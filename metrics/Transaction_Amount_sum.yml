@@ -1,0 +1,6 @@
+unique_name: Transaction_Amount_sum
+object_type: metric
+label: Transaction_Amount_sum
+calculation_method: sum
+column: TRANSACTIONAMOUNT
+dataset: FCT_ALL_TRANSACTIONS

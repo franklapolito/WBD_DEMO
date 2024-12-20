@@ -12,8 +12,13 @@ level_attributes:
   - unique_name: Transaction_ID
     label: Transaction ID
     contains_unique_names: false
-    dataset: FCT_TRANSACTIONS
-    key_columns:
-      - TRANSACTIONID
-    name_column: TRANSACTIONID
+    shared_degenerate_columns:
+      - dataset: FCT_TRANSACTIONS
+        key_columns:
+          - TRANSACTIONID
+        name_column: TRANSACTIONID
+      - dataset: FCT_ALL_TRANSACTIONS
+        key_columns:
+          - TRANSACTIONID
+        name_column: TRANSACTIONID
 type: standard

@@ -1,0 +1,6 @@
+unique_name: m_FCT_TRANSACTIONS_TRANSACTIONID_dc
+object_type: metric
+label: Transaction ID
+calculation_method: count distinct
+column: TRANSACTIONID
+dataset: FCT_TRANSACTIONS
