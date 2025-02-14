@@ -4,29 +4,13 @@ label: Customer
 hierarchies:
   - unique_name: Customer
     label: Customer
-    folder: Customer
     levels:
-      - unique_name: Cardholder - ID
-  - unique_name: Customer Name
-    label: Customer Name
-    folder: Customer
-    levels:
-      - unique_name: Cardholder ID - FullName
+      - unique_name: Customer Name
         secondary_attributes:
-          - unique_name: BIRTHDATE
-            label: BIRTHDATE
-            contains_unique_names: false
-            dataset: CUSTOMER_LOOKUP
-            folder: Customer
-            is_unique_key: false
-            key_columns:
-              - BIRTHDATE
-            name_column: BIRTHDATE
           - unique_name: GENDER
             label: GENDER
             contains_unique_names: false
             dataset: CUSTOMER_LOOKUP
-            folder: Customer
             is_unique_key: false
             key_columns:
               - GENDER
@@ -35,35 +19,15 @@ hierarchies:
             label: OCCUPATION
             contains_unique_names: false
             dataset: CUSTOMER_LOOKUP
-            folder: Customer
             is_unique_key: false
             key_columns:
               - OCCUPATION
             name_column: OCCUPATION
-          - unique_name: ISWISABI
-            label: ISWISABI
-            contains_unique_names: false
-            dataset: CUSTOMER_LOOKUP
-            folder: Customer
-            is_unique_key: false
-            key_columns:
-              - ISWISABI
-            name_column: ISWISABI
 level_attributes:
-  - unique_name: Cardholder - ID
-    label: Cardholder ID
+  - unique_name: Customer Name
+    label: Customer Name
     contains_unique_names: false
     dataset: CUSTOMER_LOOKUP
-    folder: Customer
-    is_unique_key: true
-    key_columns:
-      - CARDHOLDERID
-    name_column: CARDHOLDERID
-  - unique_name: Cardholder ID - FullName
-    label: Cardholder Full Name
-    contains_unique_names: false
-    dataset: CUSTOMER_LOOKUP
-    folder: Customer
     is_unique_key: true
     key_columns:
       - CARDHOLDERID

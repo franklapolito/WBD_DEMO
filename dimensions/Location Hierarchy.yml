@@ -1,41 +1,19 @@
-unique_name: ATM Location
+unique_name: Location Hierarchy
 object_type: dimension
-label: ATM Location
+label: Location Hierarchy
 hierarchies:
   - unique_name: ATM Location
     label: ATM Location
-    folder: ATM Location
-    levels:
-      - unique_name: ATM Name
-  - unique_name: ATM Location by Country, State, City
-    label: ATM Location by Country, State, City
-    folder: ATM Location
     levels:
       - unique_name: COUNTRY
       - unique_name: STATE
       - unique_name: CITY
-      - unique_name: ATM Name - Country
-  - unique_name: ATM Location Hierarchy - Country
-    label: ATM Location by Country
-    folder: ATM Location
-    levels:
-      - unique_name: COUNTRY
-      - unique_name: ATM Name - Country
+      - unique_name: Location Name
 level_attributes:
-  - unique_name: ATM Name
-    label: ATM Name
-    contains_unique_names: true
-    dataset: ATM_LOCATION_LOOKUP
-    folder: ATM Location
-    is_unique_key: true
-    key_columns:
-      - LOCATIONID
-    name_column: LOCATIONNAME
-  - unique_name: ATM Name - Country
-    label: ATM Name
+  - unique_name: Location Name
+    label: Location Name
     contains_unique_names: false
     dataset: ATM_LOCATION_LOOKUP
-    folder: ATM Location
     is_unique_key: true
     key_columns:
       - LOCATIONID
@@ -52,7 +30,6 @@ level_attributes:
     label: STATE
     contains_unique_names: false
     dataset: ATM_LOCATION_LOOKUP
-    folder: ATM Location
     is_unique_key: false
     key_columns:
       - STATE
@@ -61,7 +38,6 @@ level_attributes:
     label: CITY
     contains_unique_names: false
     dataset: ATM_LOCATION_LOOKUP
-    folder: ATM Location
     is_unique_key: false
     key_columns:
       - CITY

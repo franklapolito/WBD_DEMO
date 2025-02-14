@@ -16,13 +16,5 @@ columns:
     data_type: decimal(38,0)
   - name: TRANSACTIONAMOUNT
     data_type: decimal(38,0)
-  - name: Net Amount
-    data_type: decimal(38,0)
-    sql: |-
-      CASE 
-          WHEN TRANSACTIONTYPEID = 0 OR TRANSACTIONTYPEID = 4 THEN -TRANSACTIONAMOUNT
-          ELSE TRANSACTIONAMOUNT
-      END
 connection_id: con_WBD_FL_WBD
-database: WBD_FL
 table: FCT_ALL_TRANSACTIONS

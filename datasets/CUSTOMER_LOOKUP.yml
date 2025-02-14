@@ -22,6 +22,6 @@ columns:
     data_type: decimal(38,0)
   - name: FullName
     data_type: string
-    sql: CONCAT(FIRSTNAME,' ',LASTNAME)
+    sql: CONCAT(FIRSTNAME, ' ', LASTNAME)
 connection_id: con_WBD_FL_WBD
 table: CUSTOMER_LOOKUP
