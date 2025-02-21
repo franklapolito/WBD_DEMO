@@ -1,6 +1,6 @@
-unique_name: New Model
+unique_name: All Transaction Model2
 object_type: model
-label: New Model
+label: All Transaction Model2
 dimensions:
   - Transaction_Start_Date_Time
   - Transaction_End_Date_Time
