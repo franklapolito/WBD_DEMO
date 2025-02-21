@@ -1,6 +1,0 @@
-unique_name: Transaction_Type_ID_sum
-object_type: metric
-label: Transaction_Type_ID_sum
-calculation_method: sum
-column: TRANSACTIONTYPEID
-dataset: FCT_ALL_TRANSACTIONS

@@ -1,0 +1,11 @@
+unique_name: Demo 2-21
+object_type: model
+label: Demo 2-21
+description: Demo for zapier
+dimensions:
+  - Sales_Order_Number
+metrics:
+  - unique_name: m_FACTINTERNETSALES_salesamount_sum
+  - unique_name: m_FACTINTERNETSALES_unitprice_avg
+  - unique_name: m_FACTINTERNETSALES_orderquantity_max
+relationships: []

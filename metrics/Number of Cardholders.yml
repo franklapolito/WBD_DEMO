@@ -1,6 +1,0 @@
-unique_name: Number of Cardholders
-object_type: metric
-label: Number of Cardholders
-calculation_method: count distinct
-column: CARDHOLDERID
-dataset: FCT_ALL_TRANSACTIONS

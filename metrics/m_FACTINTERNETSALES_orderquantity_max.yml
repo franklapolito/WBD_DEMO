@@ -1,0 +1,6 @@
+unique_name: m_FACTINTERNETSALES_orderquantity_max
+object_type: metric
+label: Max Order Quantity
+calculation_method: maximum
+column: orderquantity
+dataset: FACTINTERNETSALES

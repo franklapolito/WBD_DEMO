@@ -1,7 +1,0 @@
-unique_name: m_FCT_ALL_TRANSACTIONS_Net_Amount_sum
-object_type: metric
-label: Net Amount
-description: Testing PBI 1
-calculation_method: sum
-column: Net Amount
-dataset: FCT_ALL_TRANSACTIONS
